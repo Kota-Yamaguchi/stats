@@ -76,7 +76,7 @@ class Sampling():
 					x.append(r)
 			return x				
 		elif ty==1:
-			data = pd.read_csv(filename, encoding="SHIFT-JIS")
+			data = pd.read_csv(filename, encoding="shift-jis")
 			return data
 
 	def trans_pd1D(self, array, columns="number"):

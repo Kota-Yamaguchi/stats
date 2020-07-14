@@ -82,10 +82,12 @@ if __name__ == "__main__":
 	from static_method import Sampling
 	import matplotlib.pyplot as plt
 	sample = Sampling()
-	fi = sample.csv_reader("sample.csv")
-	for i in range(len(fi)):
-		for k in range(len(fi[i])):
-			fi[i][k] = int(fi[i][k])
+	fi = sample.csv_reader("datadir/sample.csv",1)
+	print(fi)
+#	for i in range(len(fi)):
+#		for k in range(len(fi[i])):
+#			fi[i][k] = int(fi[i][k])
+	fi = fi.values
 	like = lambda c:sample.likelihood_function(c)
 	mcmc = MCMC(2)
 	hist = mcmc.metroPolis_binom(data=fi[1], score_function=like)
