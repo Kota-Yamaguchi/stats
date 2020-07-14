@@ -79,7 +79,7 @@ class MCMC():
 
 
 if __name__ == "__main__":
-	from generate_poison import Sampling
+	from static_method import Sampling
 	import matplotlib.pyplot as plt
 	sample = Sampling()
 	fi = sample.csv_reader("sample.csv")

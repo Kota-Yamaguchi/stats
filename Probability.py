@@ -12,12 +12,10 @@ class Probability_select():
 	#入力は必ずEnumの形で入力する、Int型での比較はできない
 	def __init__(self, ty=Probability.poisson):		
 	
-		print(Probability.poisson)
 		if Probability.poisson == ty:
 			self.prob = lambda x,mean:self.poisson_curve(x,mean)
 		elif Probability.binominal == ty:
 			self.prob = lambda k,N,p:self.binom_curve(k,N,p)
-		print(self.prob)
 	
 
 
